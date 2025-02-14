@@ -1,13 +1,13 @@
  //movie_factory.cpp
  #include "movie_factory.h"
 
- std::vector<std::shared_ptr<Movie>> MovieFactory::CreateMovies(std::vector<std::string> titles, 
+ std::vector<Movie*> MovieFactory::CreateMovies(std::vector<std::string> titles, 
                                 std::vector<std::string> directors, 
                                 std::vector<int> runtimes, 
                                 std::vector<int> ids,
                                 std::vector<double> ratings) {
       
-    std::vector<std::shared_ptr<Movie>> movies;
+    std::vector<Movie*> movies;
 
     //make sure everything is the same size
     if(titles.size() == directors.size() && 
@@ -17,7 +17,7 @@
 
 
         for(std::size_t i = 0; i < titles.size(); i++) {
-            movies.push_back(std::make_shared<Movie>(titles[i], directors[i], runtimes[i], ids[i], ratings[i]));
+            movies.push_back(new Movie(titles[i], directors[i], runtimes[i], ids[i], ratings[i]));
         }
 
         return movies;

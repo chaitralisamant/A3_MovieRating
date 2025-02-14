@@ -20,7 +20,7 @@
 
  class MovieFactory {
     public:
-    std::vector<std::shared_ptr<Movie>> CreateMovies(
+    std::vector<Movie*> CreateMovies(
       std::vector<std::string> titles,
       std::vector<std::string> directors,
       std::vector<int> runtimes,

@@ -1,7 +1,7 @@
 #define CATCH_CONFIG_MAIN			// this line tells Catch to provide a main() function
 #define CATCH_CONFIG_COLOUR_NONE	// this line avoids problems due to color-coding the output
 #include "catch2/catch.hpp"
-//#include "movie.h"
+#include "movie.h"
 #include "movie_factory.h"
 
 TEST_CASE("parameterized constructor", "[Movie]") {
@@ -23,7 +23,7 @@ TEST_CASE("create movies", "[MovieFactory]") {
 
     MovieFactory mvf;
 
-    std::vector<std::shared_ptr<Movie>> moviest = mvf.CreateMovies(titles, directors, runtimes, ids, ratings);
+    std::vector<Movie*> moviest = mvf.CreateMovies(titles, directors, runtimes, ids, ratings);
 
     REQUIRE(moviest.size() == 3);
 

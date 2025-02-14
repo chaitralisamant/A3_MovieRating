@@ -14,7 +14,7 @@ returns
 */
 // Function `CalculateAverageRuntime` to calculate the average runtime of `movies`
 
-Movie FindHighestRatedMovie(std::vector<std::shared_ptr<Movie>> movies) {
+Movie FindHighestRatedMovie(std::vector<Movie*> movies) {
     int highindex = 0;
 
     for(std::size_t i = 0; i < movies.size(); i++) {
@@ -29,7 +29,7 @@ Movie FindHighestRatedMovie(std::vector<std::shared_ptr<Movie>> movies) {
 
 }
 
-int CalculateAverageRuntime(std::vector<std::shared_ptr<Movie>> movies) {
+int CalculateAverageRuntime(std::vector<Movie*> movies) {
   
     int num = movies.size();
     int total = 0;
@@ -55,7 +55,7 @@ int main() {
 
   MovieFactory mvs;
 
-  std::vector<std::shared_ptr<Movie>> movies = mvs.CreateMovies(titles, directors, runtimes, ids, ratings);
+  std::vector<Movie*> movies = mvs.CreateMovies(titles, directors, runtimes, ids, ratings);
 
   // Perform analysis
   // Find `highest_rated` movie using `FindHighestRatedMovie`
