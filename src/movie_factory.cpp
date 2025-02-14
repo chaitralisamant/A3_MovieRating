@@ -16,7 +16,7 @@
     ids.size() == ratings.size()) {
 
 
-        for(int i = 0; i < titles.size(); i++) {
+        for(std::size_t i = 0; i < titles.size(); i++) {
             movies.push_back(std::make_shared<Movie>(titles[i], directors[i], runtimes[i], ids[i], ratings[i]));
         }
 

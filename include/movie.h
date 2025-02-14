@@ -3,6 +3,9 @@
 #include <iostream>
 #include <string>
 
+#ifndef MOVIE_H
+#define MOVIE_H
+
 class Movie {
     private:
       int id;
@@ -23,3 +26,5 @@ class Movie {
 
     void PrintMovieData(); // to print details
   };
+
+  #endif

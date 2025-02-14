@@ -17,7 +17,7 @@ returns
 Movie FindHighestRatedMovie(std::vector<std::shared_ptr<Movie>> movies) {
     int highindex = 0;
 
-    for(int i = 0; i < movies.size(); i++) {
+    for(std::size_t i = 0; i < movies.size(); i++) {
       double currrate = movies[i]->GetRating();
 
       if(currrate > movies[highindex]->GetRating()) {
@@ -34,7 +34,7 @@ int CalculateAverageRuntime(std::vector<std::shared_ptr<Movie>> movies) {
     int num = movies.size();
     int total = 0;
 
-    for(int i = 0; i < movies.size(); i++) {
+    for(std::size_t i = 0; i < movies.size(); i++) {
       total += movies[i]->GetRuntime();
     }
 
