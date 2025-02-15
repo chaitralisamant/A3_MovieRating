@@ -20,7 +20,7 @@
 
  class MovieFactory {
     public:
-    std::vector<Movie*> CreateMovies(const std::vector<std::string>& titles, 
+    static std::vector<Movie*> CreateMovies(const std::vector<std::string>& titles, 
       const std::vector<std::string> directors, 
       const std::vector<int>& runtimes, 
       const std::vector<int>& ids,

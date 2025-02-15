@@ -53,9 +53,7 @@ int main() {
 
   // Create `movies` using the factory function `CreateMovies` X
 
-  MovieFactory mvs;
-
-  std::vector<Movie*> movies = mvs.CreateMovies(titles, directors, runtimes, ids, ratings);
+  std::vector<Movie*> movies = MovieFactory::CreateMovies(titles, directors, runtimes, ids, ratings);
 
   // Perform analysis
   // Find `highest_rated` movie using `FindHighestRatedMovie`

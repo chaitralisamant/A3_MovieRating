@@ -21,9 +21,7 @@ TEST_CASE("create movies", "[MovieFactory]") {
     std::vector<int> ids{1, 2, 3};
     std::vector<double> ratings{9.1, 9.2, 9.0};
 
-    MovieFactory mvf;
-
-    std::vector<Movie*> moviest = mvf.CreateMovies(titles, directors, runtimes, ids, ratings);
+    std::vector<Movie*> moviest = MovieFactory::CreateMovies(titles, directors, runtimes, ids, ratings);
 
     REQUIRE(moviest.size() == 3);
 
