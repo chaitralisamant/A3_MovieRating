@@ -1,5 +1,0 @@
-/mnt/c/Users/Chaitrali Samant/Documents/ECE3574/A3_MovieRating/build/CMakeFiles/movie_factory.dir
-/mnt/c/Users/Chaitrali Samant/Documents/ECE3574/A3_MovieRating/build/CMakeFiles/my_tests.dir
-/mnt/c/Users/Chaitrali Samant/Documents/ECE3574/A3_MovieRating/build/CMakeFiles/test.dir
-/mnt/c/Users/Chaitrali Samant/Documents/ECE3574/A3_MovieRating/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/Chaitrali Samant/Documents/ECE3574/A3_MovieRating/build/CMakeFiles/rebuild_cache.dir
