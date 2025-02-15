@@ -1,11 +1,11 @@
  //movie_factory.cpp
  #include "movie_factory.h"
 
- std::vector<Movie*> MovieFactory::CreateMovies(std::vector<std::string> titles, 
-                                std::vector<std::string> directors, 
-                                std::vector<int> runtimes, 
-                                std::vector<int> ids,
-                                std::vector<double> ratings) {
+ std::vector<Movie*> MovieFactory::CreateMovies(const std::vector<std::string>& titles, 
+                                const std::vector<std::string> directors, 
+                                const std::vector<int>& runtimes, 
+                                const std::vector<int>& ids,
+                                const std::vector<double>& ratings) {
       
     std::vector<Movie*> movies;
 
