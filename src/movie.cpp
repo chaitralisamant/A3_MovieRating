@@ -9,7 +9,7 @@ Movie::Movie(std::string ttl, std::string dir, int r, int i, double rate) {
     rating = rate;
 
 }
-
+//getters
 std::string Movie::GetTitle() {
     return title;
 

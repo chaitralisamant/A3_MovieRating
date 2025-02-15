@@ -18,11 +18,16 @@
    vector of pointers of Movie objects
  */
 
+#ifndef MOVIE_FACTORY_H
+#define MOVIE_FACTORY_H
+
  class MovieFactory {
     public:
     static std::vector<Movie*> CreateMovies(const std::vector<std::string>& titles, 
       const std::vector<std::string> directors, 
       const std::vector<int>& runtimes, 
       const std::vector<int>& ids,
-      const std::vector<double>& ratings);
+      const std::vector<double>& ratings); //declaring a static function
  };
+
+#endif

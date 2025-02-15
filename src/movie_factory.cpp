@@ -7,7 +7,7 @@
                                 const std::vector<int>& ids,
                                 const std::vector<double>& ratings) {
       
-    std::vector<Movie*> movies;
+    std::vector<Movie*> movies; //initialized return array
 
     //make sure everything is the same size
     if(titles.size() == directors.size() && 
@@ -18,12 +18,14 @@
 
         for(std::size_t i = 0; i < titles.size(); i++) {
             movies.push_back(new Movie(titles[i], directors[i], runtimes[i], ids[i], ratings[i]));
+            //initialize new movie at each index
         }
 
         return movies;
     }
     else {
-      throw std::invalid_argument("Movie property vectors are not the same size!");
+      throw std::invalid_argument("Movie property vectors are not the same size!"); 
+      //invalid if all movies cant be made
     }
 
  }

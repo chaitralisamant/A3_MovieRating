@@ -7,6 +7,8 @@ project(A2_MatrixCal)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
+#all executing files
+
 add_executable(movie_factory src/main.cpp src/movie_factory.cpp src/movie.cpp)
 
 # adding tests

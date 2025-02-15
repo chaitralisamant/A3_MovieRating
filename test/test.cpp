@@ -4,7 +4,7 @@
 #include "movie.h"
 #include "movie_factory.h"
 
-TEST_CASE("parameterized constructor", "[Movie]") {
+TEST_CASE("parameterized constructor", "[Movie]") { //test if all data is in the movie object
     Movie test1 = Movie("Title", "Dir", 120, 4, 8.3);
 
     REQUIRE(test1.GetTitle() == "Title");
@@ -14,7 +14,7 @@ TEST_CASE("parameterized constructor", "[Movie]") {
    
 }
 
-TEST_CASE("create movies", "[MovieFactory]") {
+TEST_CASE("create movies", "[MovieFactory]") { //test is each movie object is created (in vector form)
     std::vector<std::string> titles{"Movie 1", "Movie 2", "Movie 3"};
     std::vector<std::string> directors{"Director 1", "Director 2", "Director 3"};
     std::vector<int> runtimes{140, 175, 130};
@@ -40,5 +40,10 @@ TEST_CASE("create movies", "[MovieFactory]") {
     REQUIRE(moviest[0]->GetRating() == 9.1);
     REQUIRE(moviest[1]->GetRating() == 9.2);
     REQUIRE(moviest[2]->GetRating() == 9.0);
+
+    // Free allocated memory
+    for (Movie* movie : moviest) {
+        delete movie;
+    }
 
 }

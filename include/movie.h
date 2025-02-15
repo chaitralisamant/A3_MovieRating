@@ -17,7 +17,7 @@ class Movie {
 
     public:
 
-    Movie(std::string ttl, std::string dir, int r, int i, double rate);
+    Movie(std::string ttl, std::string dir, int r, int i, double rate); //parameterized constructor
 
     std::string GetTitle(); // returns title
     std::string GetDirector(); // returns director

@@ -15,17 +15,17 @@ returns
 // Function `CalculateAverageRuntime` to calculate the average runtime of `movies`
 
 Movie FindHighestRatedMovie(std::vector<Movie*> movies) {
-    int highindex = 0;
+    int highindex = 0; //highest index starts off 0
 
     for(std::size_t i = 0; i < movies.size(); i++) {
-      double currrate = movies[i]->GetRating();
+      double currrate = movies[i]->GetRating(); //current index rating
 
-      if(currrate > movies[highindex]->GetRating()) {
-        highindex = i;
+      if(currrate > movies[highindex]->GetRating()) { //if current rating is higher that highest
+        highindex = i; //i becomes new highest
       }
     }
 
-    return *movies[highindex];
+    return *movies[highindex]; //return pointer
 
 }
 
@@ -70,5 +70,10 @@ int main() {
   // Print Average Runtime `average_runtime` X
 
   std::cout << "Average Runtime: " << avg_runtime << std::endl;
+
+  // Free allocated memory
+  for (Movie* movie : movies) {
+    delete movie;
+  }
 
 }
